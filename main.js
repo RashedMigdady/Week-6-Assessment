@@ -38,10 +38,27 @@ Ex: addKeyPowerIndex(arrOfObj2)
 ]   
 */
 
-function addKeyPowerIndex() {
-  // WRITE YOUR CODE UNDER THIS LINE  
+
+var arrOfObj1 = [
+  { a: 12 },
+  { b: 5 },
+  { c: 16 },
+  { d: 4 },
+  { e: 3 }
+]
+var arrOfObj2 = [
+  { a: 'cat' },
+  { b: 'dog' },
+  { c: 'duck' }
+]
+
+function addKeyPowerIndex(arr) {
+  //the time not en
+  return arr;
 
 }
+
+
 
 
 
@@ -63,14 +80,14 @@ Ex: decreseBy(arrOfnum1,10)
 Ex: decreseBy(arrOfNum1,-6)
 => [83, 11, 39]
 */
-
-function decreseBy() {
-  // WRITE YOUR CODE UNDER THIS LINE 
+var a = [ 0 , 0 ];
+function decreseBy(arrOfNum1 , n) 
+{
+  var result = arrOfNum1.map(index => index-n);
+  return result;
 
 }
-
-
-
+console.log(decreseBy(a , -1))
 
 
 
@@ -101,14 +118,23 @@ Ex: nameLongerThan(arrOfObj4,6)
   { name: "elizabeth"}
 ]
 */
+var arrOfObj3 = [
+  { name: "alex" },
+  { name: "mercer"},
+  { name: "alice" },
+  { name: "zaheer"},
+  { name: "elizabeth"}];
 
-function nameLongerThan() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function nameLongerThan(arr , num) 
+{ 
+  var result = [];
+  result = arr.filter(e =>  e.name.length > num)
+
+
+  return result;
+       
 }
-
-
-
-
+console.log(nameLongerThan(arrOfObj3 , 6))
 
 
 
@@ -132,10 +158,26 @@ Ex: avgLength(arrOfObj4,"name")
 Ex: avgLength(arrOfObj4,"food")
 => 6.8
 */
+var arrOfObj = [
+  { name: "alex", food: "fried chiken" },
+  { name: "mercer", food: "pizaa" },
+  { name: "alice", food: "burger" },
+  { name: "zaheer", food: "hot dog" },
+  { name: "elizabeth", food: "eggs" }
+];
+function avgLength(arrOfObj,k) 
+{
+  
+  var result = arrOfObj.reduce(function (total , elem){
+    
 
-function avgLength() {
-  // WRITE YOUR CODE UNDER THIS LINE         
 
+    return  total+elem[k].length / arrOfObj.length ;
+
+  }, 0)
+  return result;
+  
 }
+console.log(avgLength(arrOfObj , "food"))
 
-// Good luck :)
+
